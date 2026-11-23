@@ -430,7 +430,7 @@ function drawPoster(): void {
     {
       tag: "UKRAINE  *  DYMER, NEAR KYIV",
       headline: ["RUSSIAN STRIKE", "KILLS 11 IN FLAT", "BLOCK"],
-      body: "A drone strike partly collapses a five-storey block. Teams search the rubble.",
+      body: "A drone strike partly collapses a block. Teams search the rubble.",
       accent: RED,
       icon: iconBuilding,
     },
