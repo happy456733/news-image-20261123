@@ -430,21 +430,21 @@ function drawPoster(): void {
     {
       tag: "UKRAINE  *  DYMER, NEAR KYIV",
       headline: ["RUSSIAN STRIKE", "KILLS 11 IN FLAT", "BLOCK"],
-      body: "A drone strike partly collapses a five-storey apartment block. Rescue teams search the rubble.",
+      body: "A drone strike partly collapses a five-storey block. Teams search the rubble.",
       accent: RED,
       icon: iconBuilding,
     },
     {
       tag: "MARKETS  *  ASIA",
       headline: ["TECH SELL-OFF", "SINKS ASIAN", "STOCKS"],
-      body: "Seoul falls 3.3% and Tokyo 5.1% as doubts over AI spending hit chip shares worldwide.",
+      body: "Seoul falls 3.3% and Tokyo 5.1% as doubts over AI spending hit chip shares.",
       accent: TEAL,
       icon: iconChart,
     },
     {
       tag: "EUROPE  *  DENMARK AND POLAND",
       headline: ["POLAND: RUSSIA", "TRIED TWICE TO", "KILL RAPPER"],
-      body: "Kyivstoner survived a Warsaw attempt in August, Poland says. Denmark expels a Russian attache.",
+      body: "Kyivstoner survived a Warsaw attempt in August. Denmark expels a Russian attache.",
       accent: NAVY,
       icon: iconMic,
     },
@@ -464,7 +464,16 @@ function drawPoster(): void {
   iconCap(36, wy + 12, 1);
   drawText(140, wy + 12, 2, [140, 100, 0], "EDUCATION  *  SEOUL, SOUTH KOREA");
   drawText(140, wy + 32, 3, INK, "MINISTER QUITS OVER AI EXAM-CHEATING SCANDAL");
-  drawText(140, wy + 62, 2, [60, 60, 60], "THE EDUCATION MINISTER RESIGNS AFTER AI-ASSISTED CHEATING UPENDS THE NATIONAL EXAM.");
+  const skBody = wrapText(
+    "THE EDUCATION MINISTER RESIGNS AFTER AI-ASSISTED CHEATING UPENDS THE NATIONAL EXAM.",
+    976 - 140 - 16,
+    2,
+  );
+  let sky = wy + 62;
+  for (const ln of skBody) {
+    drawText(140, sky, 2, [60, 60, 60], ln);
+    sky += 17;
+  }
 
   // Also today strip
   const sy = 884;
